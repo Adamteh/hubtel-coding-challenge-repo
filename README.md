@@ -2,6 +2,12 @@
 
 Coding Test.
 
+# Screenshots
+
+![screenshot1](https://github.com/Adamteh/hubtel-coding-challenge-repo/blob/main/screenshots/screenshot1.png)
+
+![screenshot2](https://github.com/Adamteh/hubtel-coding-challenge-repo/blob/main/screenshots/screenshot2.png)
+
 
 # Overview
 
@@ -44,8 +50,3 @@ For detailed instructions on how to download and install the Flutter SDK, visit 
 The following packages are in the pubspec.yaml file<br />
 
 [flutter_svg](https://pub.dev/packages/flutter_svg)<br />
-
-
-# Screenshots
-
-
