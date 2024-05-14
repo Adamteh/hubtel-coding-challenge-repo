@@ -59,7 +59,12 @@ class _HomeState extends State<Home> {
             label: "",
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset("assets/send.svg"),
+            icon: SvgPicture.asset(
+              "assets/send.svg",
+              colorFilter: _selectedIndex == 1
+                  ? const ColorFilter.mode(Colors.black, BlendMode.srcIn)
+                  : null,
+            ),
             label: "Send",
           ),
           BottomNavigationBarItem(
@@ -67,7 +72,12 @@ class _HomeState extends State<Home> {
             label: "History",
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset("assets/schedule.svg"),
+            icon: SvgPicture.asset(
+              "assets/schedule.svg",
+              colorFilter: _selectedIndex == 3
+                  ? const ColorFilter.mode(Colors.black, BlendMode.srcIn)
+                  : null,
+            ),
             label: "Scheduled",
           ),
         ],

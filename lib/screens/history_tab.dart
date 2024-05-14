@@ -101,12 +101,13 @@ class _HistoryTabState extends State<HistoryTab> {
                           ),
                           TransactionCard(
                             time: "14:45PM",
-                            name: "Emmanuel Rockson",
+                            name:
+                                "Emmanuel Rockson Adam Nsiah Tetteh Hubtel Flutter Maxwell",
                             number: "024 123 4567",
                             amount: "GHS 500",
                             subtext: "Other",
                           ),
-                          SizedBox(height: 60),
+                          SizedBox(height: 80),
                         ],
                       ),
                     ),

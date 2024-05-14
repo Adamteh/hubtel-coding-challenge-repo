@@ -67,7 +67,11 @@ class TransactionCard extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Flexible(
-                              child: Text(name),
+                              child: Text(
+                                name,
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                              ),
                             ),
                             const SizedBox(width: 8),
                             Container(
@@ -139,9 +143,10 @@ class TransactionCard extends StatelessWidget {
 
           //Bottom
           Row(
-            mainAxisAlignment: subtext1 != null
-                ? MainAxisAlignment.spaceBetween
-                : MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            // mainAxisAlignment: subtext1 != null
+            //     ? MainAxisAlignment.spaceBetween
+            //     : MainAxisAlignment.start,
             children: [
               Row(
                 children: [

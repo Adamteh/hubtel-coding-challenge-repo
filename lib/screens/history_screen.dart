@@ -67,6 +67,7 @@ class _HistoryScreenState extends State<HistoryScreen>
           Expanded(
             child: TabBarView(
               controller: _tabController,
+              clipBehavior: Clip.none,
               children: [
                 const HistoryTab(),
                 Container(),
