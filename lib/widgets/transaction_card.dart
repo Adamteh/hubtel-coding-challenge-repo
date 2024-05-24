@@ -29,7 +29,7 @@ class TransactionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 185,
+      // height: 185,
       padding: const EdgeInsets.all(16),
       margin: const EdgeInsets.only(bottom: 16),
       decoration: BoxDecoration(
@@ -47,94 +47,90 @@ class TransactionCard extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 11),
-          Flexible(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Image.asset(
-                  mtnMomo ? "assets/mtn_momo.png" : "assets/absa.png",
-                  width: 39,
-                  height: 39,
-                ),
-                const SizedBox(width: 8),
-                Flexible(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Flexible(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Flexible(
-                              child: Text(
-                                name,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                              ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Image.asset(
+                mtnMomo ? "assets/mtn_momo.png" : "assets/absa.png",
+                width: 39,
+                height: 39,
+              ),
+              const SizedBox(width: 8),
+              Flexible(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Flexible(
+                          child: Text(
+                            name,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                        const SizedBox(width: 8),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            vertical: 6,
+                            horizontal: 12,
+                          ),
+                          decoration: BoxDecoration(
+                            color: success
+                                ? const Color(0xFFDBF7E0)
+                                : const Color(0xFFFDB0AC),
+                            borderRadius: const BorderRadius.all(
+                              Radius.circular(13),
                             ),
-                            const SizedBox(width: 8),
-                            Container(
-                              padding: const EdgeInsets.symmetric(
-                                vertical: 6,
-                                horizontal: 12,
+                          ),
+                          child: Row(
+                            children: [
+                              SvgPicture.asset(
+                                success
+                                    ? "assets/success.svg"
+                                    : "assets/failed.svg",
+                                width: 11,
+                                height: 11,
                               ),
-                              decoration: BoxDecoration(
-                                color: success
-                                    ? const Color(0xFFDBF7E0)
-                                    : const Color(0xFFFDB0AC),
-                                borderRadius: const BorderRadius.all(
-                                  Radius.circular(13),
+                              const SizedBox(width: 4),
+                              Text(
+                                success ? "Successful" : "Failed",
+                                style: TextStyle(
+                                  fontSize: 10,
+                                  color: success
+                                      ? const Color(0xFF70E083)
+                                      : const Color(0xFF99231D),
                                 ),
                               ),
-                              child: Row(
-                                children: [
-                                  SvgPicture.asset(
-                                    success
-                                        ? "assets/success.svg"
-                                        : "assets/failed.svg",
-                                    width: 11,
-                                    height: 11,
-                                  ),
-                                  const SizedBox(width: 4),
-                                  Text(
-                                    success ? "Successful" : "Failed",
-                                    style: TextStyle(
-                                      fontSize: 10,
-                                      color: success
-                                          ? const Color(0xFF70E083)
-                                          : const Color(0xFF99231D),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                      ),
-                      const SizedBox(height: 4),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            number,
-                            style: const TextStyle(
-                              color: Color(0xFF9EADBA),
-                            ),
+                      ],
+                    ),
+                    const SizedBox(height: 4),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          number,
+                          style: const TextStyle(
+                            color: Color(0xFF9EADBA),
                           ),
-                          Text(
-                            amount,
-                            style: const TextStyle(
-                              fontWeight: FontWeight.bold,
-                            ),
+                        ),
+                        Text(
+                          amount,
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
                           ),
-                        ],
-                      ),
-                    ],
-                  ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
           const SizedBox(height: 16),
           //Line
